@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Object Detection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .video-container {
+            display: inline-block;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+            width: 100%;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .btn-primary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Real-Time Object Detection By couhort 2 Fellows</h1>
+        <p class="lead">This application uses YOLOv5 for object detection in a live video feed.</p>
+
+        <!-- Video feed container -->
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" width="800" height="600" alt="Video Feed" class="img-fluid rounded-3">
+        </div>
+
+        <!-- Button to refresh feed -->
+        <a href="/" class="btn btn-primary">Refresh Feed</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
